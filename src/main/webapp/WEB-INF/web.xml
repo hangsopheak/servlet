@@ -11,4 +11,12 @@
         <url-pattern>/basicServlet</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>TestRequestServlet</servlet-name>
+        <servlet-class>com.rupp.sample.web.TestRequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestRequestServlet</servlet-name>
+        <url-pattern>/myTest</url-pattern>
+    </servlet-mapping>
 </web-app>

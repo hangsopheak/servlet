@@ -34,7 +34,7 @@
                   <configuration>
                   <scanIntervalSeconds>3</scanIntervalSeconds>
                   <webApp>
-<!--                     <contextPath>/</contextPath> -->
+                     <contextPath>/servlet</contextPath>
                   </webApp>
                   </configuration>
       </plugin>

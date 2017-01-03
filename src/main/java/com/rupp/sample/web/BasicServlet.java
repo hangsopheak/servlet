@@ -1,31 +1,20 @@
-# servlet
+/**
+ * 
+ */
+package com.rupp.sample.web;
 
->> mvn clean jetty7:run  or 
->> mvn clean jetty:run
+import java.io.IOException;
+import java.io.PrintWriter;
 
-To test basic Servlet with browser : http://localhost:8080/servlet/basicServlet
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
-
-# how it works
-
-check web.xml descriptor
-
-```java
-
- <servlet>
-        <servlet-name>BasicServlet</servlet-name>
-        <servlet-class>com.rupp.sample.web.BasicServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>BasicServlet</servlet-name>
-        <url-pattern>/basicServlet</url-pattern>
-    </servlet-mapping>
-    
-```
-
-BasicServlet.java
-
-```java
+/**
+ * @author sopheamak
+ *
+ */
 public class BasicServlet extends HttpServlet {
     //resource
     private String message;
@@ -53,5 +42,3 @@ public class BasicServlet extends HttpServlet {
         System.out.println("=====destroy method is called====");
     }
 }
-
-```

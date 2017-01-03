@@ -63,7 +63,21 @@
         <servlet-name>TestForm</servlet-name>
         <url-pattern>/testForm</url-pattern>
     </servlet-mapping>
+    <!-- SessionTrack -->
+    <servlet>
+        <servlet-name>SessionTrack</servlet-name>
+        <servlet-class>com.rupp.sample.web.SessionTrack</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionTrack</servlet-name>
+        <url-pattern>/sessionTrack</url-pattern>
+    </servlet-mapping>
     
+    <session-config>
+    <!-- 15mintue  default value is 30min -->
+    <session-timeout>15</session-timeout>
+  </session-config>
+  
     <!-- welcome file -->
    <welcome-file-list>  
    <welcome-file>index.jsp</welcome-file>  

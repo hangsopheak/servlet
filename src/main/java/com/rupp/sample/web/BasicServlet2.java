@@ -5,8 +5,6 @@ package com.rupp.sample.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
-import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,12 +12,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Test HttpServlet Request
  * @author sopheamak
  *
  */
-@SuppressWarnings("serial")
-public class TestRequestAttributeServlet extends HttpServlet {
+public class BasicServlet2 extends HttpServlet {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    
     @Override
     public void init() throws ServletException {
         System.out.println("=====init method is called====");
@@ -31,21 +32,16 @@ public class TestRequestAttributeServlet extends HttpServlet {
         //render to html page
        // Set response content type
         response.setContentType("text/html");
-         //set attriName1
-         request.setAttribute("attriName1", "Attribute value 1");
-         //set attriName2
-         request.setAttribute("attriName2", new Date());
-         //remove attribute name
-         //request.removeAttribute("name");
-         
+
         // Actual logic goes here.
-        final PrintWriter out = response.getWriter();
-        out.println(String.format("<h1>attriName1: %s </h1>", request.getAttribute("attriName1")));
-        out.println(String.format("<h1>attriName2: %s </h1>", request.getAttribute("attriName2")));
+        PrintWriter out = response.getWriter();
+        out.println(String.format("<h1>getServletConfig().getInitParameter -  %s </h1>", getServletConfig().getInitParameter("initValue")));
+        out.println(String.format("<h1> getServletContext().getInitParameter - %s </h1>", getServletContext().getInitParameter("email")));
     }
 
     @Override
     public void destroy() {
         System.out.println("=====destroy method is called====");
     }
+
 }

@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  
-     <servlet>
+     
+     
+     <!-- This is a context init parameter getServletContext().getInitParameter-->
+    <context-param>
+        <param-name>email</param-name>
+        <param-value>admin@example.com</param-value>
+    </context-param>
+    
+      <servlet>
         <servlet-name>BasicServlet</servlet-name>
         <servlet-class>com.rupp.sample.web.BasicServlet</servlet-class>
     </servlet>
@@ -10,10 +17,28 @@
         <servlet-name>BasicServlet</servlet-name>
         <url-pattern>/basicServlet</url-pattern>
     </servlet-mapping>
+   
+     <servlet>
+        <servlet-name>BasicServlet2</servlet-name>
+        <servlet-class>com.rupp.sample.web.BasicServlet2</servlet-class>
+        <init-param>
+            <!-- getServletConfig().getInitParameter -->
+            <param-name>initValue</param-name>
+             <param-value>init value display here:use getServletConfig().getInitParameter(</param-value>
+      </init-param>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>BasicServlet2</servlet-name>
+        <url-pattern>/basicServlet2</url-pattern>
+    </servlet-mapping>
     
     <servlet>
         <servlet-name>TestRequestServlet</servlet-name>
         <servlet-class>com.rupp.sample.web.TestRequestServlet</servlet-class>
+        <!--  load at server start -->
+        <load-on-startup>1</load-on-startup> 
+        
     </servlet>
     <servlet-mapping>
         <servlet-name>TestRequestServlet</servlet-name>
@@ -23,9 +48,25 @@
     <servlet>
         <servlet-name>TestRequestAttributeServlet</servlet-name>
         <servlet-class>com.rupp.sample.web.TestRequestAttributeServlet</servlet-class>
+        <load-on-startup>2</load-on-startup> 
+        
     </servlet>
     <servlet-mapping>
         <servlet-name>TestRequestAttributeServlet</servlet-name>
         <url-pattern>/myTestAttribute</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>TestForm</servlet-name>
+        <servlet-class>com.rupp.sample.web.TestRequestGetPostServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestForm</servlet-name>
+        <url-pattern>/testForm</url-pattern>
+    </servlet-mapping>
+    
+    <!-- welcome file -->
+   <welcome-file-list>  
+   <welcome-file>index.jsp</welcome-file>  
+   <welcome-file>index.html</welcome-file>  
+  </welcome-file-list>  
 </web-app>

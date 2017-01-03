@@ -16,8 +16,13 @@ import javax.servlet.http.HttpServletResponse;
  *
  */
 public class BasicServlet extends HttpServlet {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
     //resource
     private String message;
+    
     @Override
     public void init() throws ServletException {
         System.out.println("=====init method is called====");
@@ -41,4 +46,5 @@ public class BasicServlet extends HttpServlet {
     public void destroy() {
         System.out.println("=====destroy method is called====");
     }
+
 }

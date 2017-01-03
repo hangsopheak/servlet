@@ -19,4 +19,13 @@
         <servlet-name>TestRequestServlet</servlet-name>
         <url-pattern>/myTest</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>TestRequestAttributeServlet</servlet-name>
+        <servlet-class>com.rupp.sample.web.TestRequestAttributeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestRequestAttributeServlet</servlet-name>
+        <url-pattern>/myTestAttribute</url-pattern>
+    </servlet-mapping>
 </web-app>

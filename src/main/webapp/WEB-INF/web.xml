@@ -90,6 +90,24 @@
         <url-pattern>/readCookie</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+	<servlet-name>ErrorHandler</servlet-name>
+	<servlet-class>com.rupp.sample.web.ErrorHandler</servlet-class>
+</servlet>
+	<!-- servlet mappings -->
+	<servlet-mapping>
+		<servlet-name>ErrorHandler</servlet-name>
+		<url-pattern>/errorHandler</url-pattern>
+	</servlet-mapping>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errorHandler</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/errorHandler</location>
+	</error-page>
+
     <session-config>
     <!-- 15mintue  default value is 30min -->
     <session-timeout>15</session-timeout>

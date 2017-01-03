@@ -31,7 +31,7 @@ public class BasicServlet extends HttpServlet {
     }
 
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         System.out.println("=====service method is called ====");
         //render to html page
        // Set response content type
@@ -40,6 +40,8 @@ public class BasicServlet extends HttpServlet {
         // Actual logic goes here.
         PrintWriter out = response.getWriter();
         out.println(String.format("<h1> %s </h1>", message));
+        
+      //  throw new ServletException("GET method is not supported.");
     }
 
     @Override

@@ -9,6 +9,12 @@
     <servlet-mapping>
         <servlet-name>BasicServlet</servlet-name>
         <url-pattern>/basicServlet</url-pattern>
+<!--          http://serverUrl:port/contextPath/hello.jsp -->
+<!--         <url-pattern>/hello.jsp</url-pattern> -->
+<!--         http://serverUrl:port/contextPath/abc/test.html -->
+<!--         <url-pattern>/abc/test.html</url-pattern>   -->
+<!--         http://serverUrl:port/contextPath/basic/anyString -->
+<!--         <url-pattern>/basic/*</url-pattern>    -->
     </servlet-mapping>
     
 </web-app>

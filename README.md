@@ -55,3 +55,29 @@ public class BasicServlet extends HttpServlet {
 }
 
 ```
+
+# Servlet Mapping url pattern web.xml
+
+```java
+  <servlet>
+        <servlet-name>BasicServlet</servlet-name>
+        <servlet-class>com.rupp.sample.web.BasicServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BasicServlet</servlet-name>
+
+<!--         <url-pattern>/basicServlet</url-pattern> -->
+<!--          http://serverUrl:port/contextPath/hello.jsp -->
+
+<!--         <url-pattern>/hello.jsp</url-pattern> -->
+
+<!--         http://serverUrl:port/contextPath/abc/test.html -->
+
+<!--         <url-pattern>/abc/test.html</url-pattern>   -->
+
+<!--         http://serverUrl:port/contextPath/basic/anyString 
+ex : http://localhost:8080/servlet/basic/myTest  - match url-pattern
+ex : http://localhost:8080/servlet/basic/myTest/abac/test.jsp   - match url-pattern
+-->
+            <url-pattern>/basic/*</url-pattern>   
+```

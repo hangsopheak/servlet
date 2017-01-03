@@ -73,6 +73,23 @@
         <url-pattern>/sessionTrack</url-pattern>
     </servlet-mapping>
     
+     <servlet>
+        <servlet-name>WriteCookie</servlet-name>
+        <servlet-class>com.rupp.sample.web.WriteCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WriteCookie</servlet-name>
+        <url-pattern>/writeCookie</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReadCookie</servlet-name>
+        <servlet-class>com.rupp.sample.web.ReadCookie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReadCookie</servlet-name>
+        <url-pattern>/readCookie</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
     <!-- 15mintue  default value is 30min -->
     <session-timeout>15</session-timeout>

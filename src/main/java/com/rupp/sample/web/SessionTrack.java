@@ -54,23 +54,19 @@ public class SessionTrack extends HttpServlet {
                 "<tr bgcolor=\"#949494\">\n" +
                 "  <th>Session info</th><th>value</th></tr>\n" +
                 "<tr>\n" +
-                "  <td>id</td>\n" +
-                "  <td>" + session.getId() + "</td></tr>\n" +
+                "  <td>id</td>\n" + "  <td>" + session.getId() + "</td></tr>\n" +
+                
                 "<tr>\n" +
-                "  <td>Creation Time</td>\n" +
-                "  <td>" + createTime + 
+                "  <td>Creation Time</td>\n" + "  <td>" + createTime + 
                 "  </td></tr>\n" +
                 "<tr>\n" +
-                "  <td>Time of Last Access</td>\n" +
-                "  <td>" + lastAccessTime + 
+                "  <td>Time of Last Access</td>\n" + "  <td>" + lastAccessTime + 
                 "  </td></tr>\n" +
                 "<tr>\n" +
-                "  <td>User ID</td>\n" +
-                "  <td>" + userID + 
+                "  <td>User ID</td>\n" + "  <td>" + userID + 
                 "  </td></tr>\n" +
                 "<tr>\n" +
-                "  <td>Number of visits</td>\n" +
-                "  <td>" + visitCount + "</td></tr>\n" +
+                "  <td>Number of visits</td>\n" +  "  <td>" + visitCount + "</td></tr>\n" +
                 "</table>\n" +
                 "</body></html>");
     }

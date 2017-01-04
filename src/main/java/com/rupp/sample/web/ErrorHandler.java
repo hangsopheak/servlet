@@ -53,6 +53,10 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
        out.println("The request URI: " + requestUri + "<br><br>");
        out.println("The exception message: " +  throwable.getMessage( ));
     }
+    out.write("<br><br>");
+    out.write("<a href=\"index.html\">Home Page</a>");
+    out.write("</body></html>");
+    
     out.println("</body>");
     out.println("</html>");
 

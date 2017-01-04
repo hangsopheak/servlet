@@ -7,10 +7,37 @@
   <version>1.0-SNAPSHOT</version>
   <name>Servlet Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <developers>
+        <developer>
+            <id>Sophea</id>
+            <name>Sophea MAK</name>
+            <email>sopheamak@gmail.com</email>
+            <url>http://www.linkedin.com/in/sopheamak</url>
+        </developer>
+
+    </developers>
+  <!-- Specify hard-coded project properties here -->
+    <properties>
+        <application.name>servlet</application.name>
+        <application.version>${project.version}</application.version>
+        <logging.level>DEBUG</logging.level>
+    </properties>
+  
   
   <build>
+    
     <finalName>servlet</finalName>
-
+    <resources>
+            <!-- base set of resources -->
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+            <!-- filter some files -->
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+    </resources>
     <plugins>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>

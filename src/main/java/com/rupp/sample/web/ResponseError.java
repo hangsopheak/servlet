@@ -11,7 +11,10 @@ public class ResponseError  extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // Set error code and reason.
-        resp.sendError(407, "Need authentication!!!" );
+        // resp.sendError(407, "Need authentication!!!" );
+        
+        //error basic authentication
+        resp.setHeader("WWW-Authenticate", "Basic realm=\"servlet\"");
+        resp.setStatus(401);
     }
-
 }

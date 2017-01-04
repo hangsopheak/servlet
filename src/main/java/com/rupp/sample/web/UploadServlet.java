@@ -108,7 +108,6 @@ public class UploadServlet extends HttpServlet {
         }
         catch (Exception ex) {
             //System.out.println(ex);
-            
             throw new ServletException(ex.getMessage());
         }
     }

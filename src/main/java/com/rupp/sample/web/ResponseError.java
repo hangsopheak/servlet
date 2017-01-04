@@ -14,7 +14,7 @@ public class ResponseError  extends HttpServlet {
         // resp.sendError(407, "Need authentication!!!" );
         
         //error basic authentication
-        resp.setHeader("WWW-Authenticate", "Basic realm=\"servlet\"");
-        resp.setStatus(401);
+      //  resp.setHeader("WWW-Authenticate", "Basic realm=\"servlet\"");
+        resp.sendError(401, "Unauthencitation!!!");
     }
 }

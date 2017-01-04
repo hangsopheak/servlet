@@ -9,6 +9,16 @@
         <param-value>admin@example.com</param-value>
     </context-param>
     
+   <filter>
+    <filter-name>myFitler</filter-name>
+    <filter-class>com.rupp.sample.web.MyFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+      <filter-name>myFitler</filter-name>
+      <url-pattern>/myFilter.jsp</url-pattern>
+    </filter-mapping>  
+
       <servlet>
         <servlet-name>BasicServlet</servlet-name>
         <servlet-class>com.rupp.sample.web.BasicServlet</servlet-class>

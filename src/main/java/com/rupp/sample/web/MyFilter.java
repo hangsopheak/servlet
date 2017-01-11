@@ -33,6 +33,7 @@ public class MyFilter implements Filter {
         out.print("<h1>Filter is invoked before : " + startTime + "</h1>");
 
         chain.doFilter(req, resp);// sends request to next resource
+        
         Long endTime = System.currentTimeMillis();
         
         out.print("<h1>Filter is invoked after : " + new Date(endTime) +" </h1>");

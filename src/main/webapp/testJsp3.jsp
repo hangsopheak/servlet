@@ -5,7 +5,7 @@
 
 <%! 
 public static String getMyStatment () {
-        return ("This statement is a return of a method");
+        return ("This java statement is a return of a method");
 }
 %>
 

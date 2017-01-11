@@ -35,6 +35,9 @@ public class SessionTrack extends HttpServlet {
         }
         else {
             visitCount = (Integer) session.getAttribute(visitCountKey);
+            if (visitCount == null) {
+                visitCount =0;
+            }
             visitCount = visitCount + 1;
             userID = (String) session.getAttribute(userIDKey);
         }

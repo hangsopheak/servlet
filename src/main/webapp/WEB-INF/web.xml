@@ -6,7 +6,7 @@
      <!-- This is a context init parameter getServletContext().getInitParameter-->
     <context-param>
         <param-name>email</param-name>
-        <param-value>admin@example.com</param-value>
+        <param-value>admin-abc@example.com</param-value>
     </context-param>
        
     <context-param> 
@@ -30,7 +30,7 @@
         <init-param>
             <!-- getServletConfig().getInitParameter -->
             <param-name>initValue</param-name>
-             <param-value>init value display here:use getServletConfig().getInitParameter(</param-value>
+             <param-value>---init value display here:use getServletConfig().getInitParameter(</param-value>
       </init-param>
     </servlet>
     
@@ -157,6 +157,15 @@
     <session-timeout>15</session-timeout>
   </session-config>
   
+  <filter>  
+<filter-name>MyFilter</filter-name>  
+<filter-class>com.rupp.sample.web.MyFilter</filter-class>  
+</filter> 
+   
+<filter-mapping>  
+<filter-name>MyFilter</filter-name>  
+<url-pattern>/myFilter.jsp</url-pattern>  
+</filter-mapping>  
     <!-- welcome file -->
    <welcome-file-list>  
    <welcome-file>index.jsp</welcome-file>  

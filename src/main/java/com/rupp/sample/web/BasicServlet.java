@@ -25,7 +25,7 @@ public class BasicServlet extends HttpServlet {
     
     @Override
     public void init() throws ServletException {
-        System.out.println("=====init method is called====");
+        System.out.println("=====Basic Servlet init method is called====");
         //populate initialize resources
         message = "Hello world - my Basic Servlet";
     }

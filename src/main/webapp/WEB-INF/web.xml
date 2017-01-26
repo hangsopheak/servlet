@@ -35,6 +35,15 @@
     </servlet>
     
     <servlet-mapping>
+        <servlet-name>BasicServlet3</servlet-name>
+        <url-pattern>/basicServlet3</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>BasicServlet3</servlet-name>
+        <servlet-class>com.rupp.sample.web.BasicServlet3</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
         <servlet-name>BasicServlet2</servlet-name>
         <url-pattern>/basicServlet2</url-pattern>
     </servlet-mapping>
